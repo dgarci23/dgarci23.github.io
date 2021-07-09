@@ -447,6 +447,8 @@ section {
     padding-bottom: 0;
     position: relative;
     overflow: hidden;
+
+    padding-top: 11vh;
 }
 
 .contact-container {
