@@ -34,8 +34,7 @@ function changeRight() {
 
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("project-card") && run) {
-        if (e.target.id == id) {
-        } else {
+        if (e.target.id !== id) {
             run = false;
             if (id > Number(e.target.id)) {
                 projects.forEach((item) => {item.classList.add("move-right")});
