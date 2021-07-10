@@ -33,7 +33,6 @@ function changeRight() {
 }
 
 document.addEventListener("click", (e) => {
-    console.log(e.target);
     if (e.target.classList.contains("project-card") && run) {
         if (e.target.id !== id) {
             run = false;
@@ -79,14 +78,12 @@ function touchMoveHandler(e) {
     let xDiff = xUp - xDown;
     let yDiff = yUp - yDown;
 
-    console.log(xDiff);
-
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
-        if (xDiff > 10 && id > 1) {
+        if (xDiff > 4 && id > 1) {
             projects.forEach((item) => {item.classList.add("move-right")});
             setTimeout(changeRight,1100);
             curr_id = id - 1;
-        } else if (xDiff < -10 && id < 5) {
+        } else if (xDiff < -4 && id < 5) {
             projects.forEach((item) => {item.classList.add("move-left")});
             setTimeout(changeLeft,1100);
             curr_id = id + 1
