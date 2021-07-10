@@ -39,11 +39,11 @@ document.addEventListener("click", (e) => {
             run = false;
             if (id > Number(e.target.id)) {
                 projects.forEach((item) => {item.classList.add("move-right")});
-                setTimeout(changeRight,1800);
+                setTimeout(changeRight,1100);
                 curr_id = Number(e.target.id);
             } else {
                 projects.forEach((item) => {item.classList.add("move-left")});
-                setTimeout(changeLeft,1800);
+                setTimeout(changeLeft,1100);
                 curr_id = Number(e.target.id);
             }
         }
@@ -82,11 +82,11 @@ function touchMoveHandler(e) {
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
         if (xDiff > 0 && id > 1) {
             projects.forEach((item) => {item.classList.add("move-right")});
-            setTimeout(changeRight,1800);
+            setTimeout(changeRight,1100);
             curr_id = id - 1;
         } else if (xDiff < 0 && id < 5) {
             projects.forEach((item) => {item.classList.add("move-left")});
-            setTimeout(changeLeft,1800);
+            setTimeout(changeLeft,1100);
             curr_id = id + 1
         }
     }

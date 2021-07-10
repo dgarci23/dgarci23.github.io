@@ -345,10 +345,10 @@ section {
 }
 
 .move-left {
-    animation: move-left 1.5s forwards;
+    animation: move-left 1s forwards;
 }
 .move-right {
-    animation: move-right 1.5s forwards;
+    animation: move-right 1s forwards;
 }
 
 .carousel-btn {
