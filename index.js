@@ -40,11 +40,11 @@ document.addEventListener("click", (e) => {
             run = false;
             if (id > Number(e.target.id)) {
                 projects.forEach((item) => {item.classList.add("move-right")});
-                setTimeout(changeRight,1600);
+                setTimeout(changeRight,1800);
                 curr_id = Number(e.target.id);
             } else {
                 projects.forEach((item) => {item.classList.add("move-left")});
-                setTimeout(changeLeft,1550);
+                setTimeout(changeLeft,1800);
                 curr_id = Number(e.target.id);
             }
         }
