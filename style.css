@@ -376,9 +376,8 @@ section {
 }
 
 .project-img img {
-    width: 29px;
-    border-radius: 5%;
-    margin-bottom: 5vh;
+    max-width: 100%;
+    height: auto;
 }
 
 .project-link {
