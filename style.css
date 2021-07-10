@@ -181,6 +181,7 @@ section {
     text-align: center;
     color: #48A4c8;
     animation: pop-on 0.5s ease-out 4s forwards;
+    -webkit-animation: pop-on 0.5s ease-out 4s forwards;
     /* Font */
     font-family: "Roboto Mono", monospace;
     font-size: 2.5rem;
@@ -205,6 +206,7 @@ section {
     transform: rotate(30deg);
     -webkit-transform: rotate(30deg);
     animation: photo-appear  2s calc(var(--animationSpeed) + 1s) ease-out forwards;
+    -webkit-animation: photo-appear  2s calc(var(--animationSpeed) + 1s) ease-out forwards;;
 }
 
 .circle-1 {
@@ -243,12 +245,20 @@ section {
     var(--animationSpeed) 
     steps(14) 
     0.5s forwards;
+    -webkit-animation: 
+    typewriter 
+    var(--animationSpeed) 
+    steps(14) 
+    0.5s forwards;
 }
 
 .intro h1::after {
     width: 0.250rem;
     background-color: black;
     animation: 
+    typewriter var(--animationSpeed) steps(14) 0.5s forwards,
+    blinking 750ms steps(14) infinite;
+    -webkit-animation: 
     typewriter var(--animationSpeed) steps(14) 0.5s forwards,
     blinking 750ms steps(14) infinite;
 }
@@ -265,6 +275,7 @@ section {
     background-color: #05386b;
     /* Animation */
     animation: pop-on 1s ease-out 4s forwards;
+    -webkit-animation: pop-on 1s ease-out 4s forwards;
     opacity: 0;
     display: inline;
 }
@@ -350,9 +361,11 @@ section {
 
 .move-left {
     animation: move-left 1s forwards;
+    -webkit-animation: move-left 1s forwards;
 }
 .move-right {
     animation: move-right 1s forwards;
+    -webkit-animation: move-right 1s forwards;
 }
 
 .carousel-btn {
