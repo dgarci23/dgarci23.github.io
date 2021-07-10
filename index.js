@@ -35,7 +35,6 @@ function changeRight() {
 document.addEventListener("click", (e) => {
     if (e.target.classList.contains("project-card") && run) {
         if (e.target.id == id) {
-            console.log("nothing...same id");
         } else {
             run = false;
             if (id > Number(e.target.id)) {
@@ -51,3 +50,60 @@ document.addEventListener("click", (e) => {
     }
 });
 
+
+// https://stackoverflow.com/questions/2264072/detect-a-finger-swipe-through-javascript-on-the-iphone-and-android
+
+const projectsCard = document.querySelector(".project-cards");
+let xDown = null;
+let yDown = null;
+
+function getTouches(e) {
+    return e.touches;
+}
+
+function touchStartHandler(e) {
+    run = false;
+    const first = getTouches(e)[0];
+    xDown = first.clientX;
+    yDown = first.clientY;
+}
+
+function touchMoveHandler(e) {
+    if (!xDown || !yDown) {
+        return;
+    }
+
+    let xUp = e.touches[0].clientX;
+    let yUp = e.touches[0].clientY;
+
+    let xDiff = xUp - xDown;
+    let yDiff = yUp - yDown;
+
+    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        if (xDiff > 0 && id > 1) {
+            projects.forEach((item) => {item.classList.add("move-right")});
+            setTimeout(changeRight,1800);
+            curr_id = id - 1;
+        } else if (xDiff < 0 && id < 5) {
+            projects.forEach((item) => {item.classList.add("move-left")});
+            setTimeout(changeLeft,1800);
+            curr_id = id + 1
+        }
+    }
+
+    xDown = null;
+    yDown = null;
+
+    run = true;
+}
+
+document.addEventListener("touchstart", (e) => {
+    if (projectsCard.contains(e.target) || run) {
+        touchStartHandler(e);
+    }
+});
+document.addEventListener("touchmove", (e) => {
+    if (projectsCard.contains(e.target)) {
+        touchMoveHandler(e);
+    }
+});
