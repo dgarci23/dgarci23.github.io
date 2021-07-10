@@ -373,7 +373,9 @@ section {
     color: #48A4c8;
     font-size: calc(20px + (25 - 20)*((100vw - 300px)/1300));
     text-align: center;
-    margin-top: 0;
+    width: fit-content;
+    margin: 0 auto;
+    margin-bottom: 3vh;
 }
 
 .project-img img {
@@ -382,6 +384,11 @@ section {
     max-height: 55vh;
     border-radius: 5%;
     margin-bottom: 5vh;
+}
+
+.project-img {
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .project-link {
