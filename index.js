@@ -80,7 +80,10 @@ function touchMoveHandler(e) {
 
     if (Math.abs(xDiff) > Math.abs(yDiff)) {
         if (xDiff > 4 && id > 1) {
-            projects.forEach((item) => {item.classList.add("move-right")});
+            projects.forEach((item) => {
+                item.style.animation = "move-right 1s forwards";
+                item.style.WebkitAnimation = "move-right 1s forwards";
+            });
             setTimeout(changeRight,1100);
             curr_id = id - 1;
         } else if (xDiff < -4 && id < 5) {
