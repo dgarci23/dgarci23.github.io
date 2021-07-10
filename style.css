@@ -376,9 +376,7 @@ section {
 }
 
 .project-img img {
-    width: 29vw;
-    max-width: 55vh;
-    max-height: 55vh;
+    width: 29px;
     border-radius: 5%;
     margin-bottom: 5vh;
 }
