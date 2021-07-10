@@ -284,8 +284,9 @@ section {
 .projects {
     padding-bottom: 10vmax;
     overflow: hidden;
-    height: 100vh;
+    height: 60vmax;
 }
+
 
 .projects-container {
     width: 70%;
@@ -302,6 +303,7 @@ section {
 .project-cards {
     position: relative;
     width: 100vw;
+    height: fit-content;
 }
 
 .project-card {
@@ -314,8 +316,6 @@ section {
     padding: 5vh 5vw;
     box-sizing: border-box;
     text-align: center;
-
-
 }
 
 
@@ -376,7 +376,7 @@ section {
 }
 
 .project-img img {
-    width: 29vw;
+    height: 29vw;
     max-width: 55vh;
     max-height: 55vh;
     border-radius: 5%;
