@@ -256,12 +256,13 @@ section {
     width: 150px;
     height: 40px;
     /* Spacing */
-    margin-top: 5vh;
+    margin-top: 7vh;
     /* Color */
     background-color: #05386b;
     /* Animation */
     animation: pop-on 1s ease-out 4s forwards;
     opacity: 0;
+    display: inline;
 }
 
 .fa-eye {
