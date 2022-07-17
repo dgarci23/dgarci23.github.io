@@ -56,7 +56,7 @@ h1.section-header {
 }
 
 section#about {
-    height:90vh; 
+    height:95vh; 
     padding-top:30px;
 }
 
@@ -78,4 +78,8 @@ section#contact {
 
 a.navbar-name {
     padding-bottom: 0;
+}
+
+h1.hi-text {
+    font-size: 3.5rem;
 }
