@@ -1,3 +1,9 @@
-# dgarci23.github.io
+# personal-website
+Personal website.
 
-This is my personal website!
+# To do
+- [ ] Skill section
+- [ ] Project section
+- [ ] Contact section
+- [x] Link underlining
+- [ ] Cards of odd section spacing
